@@ -4,9 +4,11 @@ window.onload = () => {
 function main (){
   const root = document.getElementById("root");
   const btn = document.getElementById("button");
+  const output = document.getElementById("output");
   btn.addEventListener("click",  function(){
    const  bgclour = generateHexColour ();
    root.style.backgroundColor = bgclour;
+   output.value = bgclour;
   })
 }
 
