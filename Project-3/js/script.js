@@ -5,11 +5,16 @@ function main (){
   const root = document.getElementById("root");
   const btn = document.getElementById("button");
   const output = document.getElementById("output");
+  const copybtn = document.getElementById("copy-btn");
   btn.addEventListener("click",  function(){
    const  bgclour = generateHexColour ();
    root.style.backgroundColor = bgclour;
-   output.value = bgclour
-  })
+   output.value = bgclour;
+  });
+
+ copybtn.addEventListener("click" , function(){
+  navigator.clipboard.writeText(output.value);
+ })
 }
 
 function generateHexColour(){
